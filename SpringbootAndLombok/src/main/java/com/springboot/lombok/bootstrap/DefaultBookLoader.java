@@ -14,9 +14,9 @@ import com.springboot.lombok.service.BookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-// Causes lombok to generate a logger field.
+// lombok 로거 필드 생성
 @Slf4j
-// Causes lombok to generate a constructor with 1 parameter for each field that requires special handling.
+// lombok 처리가 필요한 각 필드에 1 개 매개 변수 생성자 생성
 @RequiredArgsConstructor
 @Component
 public class DefaultBookLoader implements CommandLineRunner {
@@ -31,12 +31,12 @@ public class DefaultBookLoader implements CommandLineRunner {
 
     private void loadBooksData() {
         if (bookService.getBooksCount() == 0) {
-            log.info("Saving the default books into the database.");
+            log.info("기본 데이터 저장");
             for (int x = 0; x < 5; x++) {
                 bookService.save(createNewBook());
             }
         } else {
-            log.info("Default books are already present in the database.");
+            log.info("기본 데이터 존재");
         }
     }
 
