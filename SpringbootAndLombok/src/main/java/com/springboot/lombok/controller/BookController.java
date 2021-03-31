@@ -29,9 +29,8 @@ import com.springboot.lombok.service.BookService;
 
 import lombok.extern.slf4j.Slf4j;
 
-// NOTE - We have left the implementation of HATEOAS principle for simplicity.
 
-// Causes lombok to generate a logger field.
+// Lombok 로거 필드 생성
 @Slf4j
 @RestController
 @RequestMapping(value = "/api/")
@@ -43,7 +42,7 @@ public class BookController {
     // URL - http://localhost:8000/api/books
     @GetMapping(value = "books")
     public ResponseEntity<List<Book>> getBooks() {
-        log.info("Getting all books from the dB.");
+        log.info(" books DB 호출");
         final Iterable<Book> bookIterable = bookService.getAllBooks();
         final List<Book> books = StreamSupport.stream(bookIterable.spliterator(), false).collect(Collectors.toList());
         return new ResponseEntity<>(books, HttpStatus.OK);
@@ -52,7 +51,7 @@ public class BookController {
     // URL - http://localhost:8000/api/book/id/1
     @GetMapping(value = "book/id/{id}")
     public ResponseEntity<Book> getBookById(@PathVariable(name = "id") final int bookId) {
-        log.info("Getting book with book-id= {} from the dB.", bookId);
+        log.info("books DB 에서 id값으로 book 데이터 호출", bookId);
         final Book book = bookService.getBookById(bookId)
                 .orElseThrow(() -> new BookNotFoundException("Book with id= " + bookId + "not found in the dB."));
         return new ResponseEntity<>(book, HttpStatus.OK);
@@ -61,7 +60,7 @@ public class BookController {
     // URL - http://localhost:8000/api/book/genre/Mythopoeia
     @GetMapping(value = "book/genre/{genre}")
     public ResponseEntity<List<Book>> getBooksByGenre(@PathVariable(name = "genre") final String genre) {
-        log.info("Getting book(s) for genre= {} from the dB.", genre);
+        log.info("books DB 에서 genre값으로 book 데이터 호출", genre);
         final List<Book> books = bookService.getAllBooksByGenre(genre);
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
@@ -70,7 +69,7 @@ public class BookController {
     @GetMapping(value = "book/quantity/{quantity}")
     public ResponseEntity<List<Book>> getBooksByQuantityGreaterThanEqual(
             @PathVariable(name = "quantity") final int quantity) {
-        log.info("Getting book(s) from the dB where quantity is greater-than or equal to= {}.", quantity);
+        log.info("books DB 에서 quantity값으로 >= quantity 조건의 book 데이터 호출.", quantity);
         final List<Book> books = bookService.getAllBooksByQuantityGreaterThanEqual(quantity);
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
@@ -89,13 +88,13 @@ public class BookController {
     */
     @PostMapping(value = "book/save")
     public ResponseEntity<Void> save(@RequestBody final Book book) {
-        log.info("Saving book with details= {} in the dB.", book.toString());
+        log.info("DB 에 book 데이터 저장", book.toString());
         bookService.save(book);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
     
-    
-    
+    // URL - http://localhost:8000/api/book/apiCalㅣ
+    // HttpEntity / ResponseEntity 를 이용한 REST API 호출 
     @GetMapping(value = "book/apiCall")
     public ResponseEntity<String> apiCall() {
     	
@@ -130,20 +129,22 @@ public class BookController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
     
-    
-    
-    @GetMapping(value = "booksbymapper")
+    // 마이바티스 리스트 출력1
+    // URL - http://localhost:8000/api/book/booksbymapper
+    @GetMapping(value = "book/booksbymapper")
     public ResponseEntity<List<Book>> getBooksByMapper() {
-        log.info("Getting all books from the dB.");
+        log.info("DB books 리스트 출력");
         final Iterable<Book> bookIterable = bookService.selectBook();
         final List<Book> books = StreamSupport.stream(bookIterable.spliterator(), false).collect(Collectors.toList());
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
     
     
+    // 마이바티스 사용저장1
+    //URL - http://localhost:8000/api/book/savebymapper
     @PostMapping(value = "book/savebymapper")
     public ResponseEntity<Void> saveByMapper(@RequestBody final Book book) {
-        log.info("Saving book with details= {} in the dB.", book.toString());
+        log.info("DB 에 book 데이터 저장", book.toString());
         
         Map<String, String> map = new HashMap<String, String>();
         // (#{author}, #{genre}, #{published}, #{publisher}, #{quantity}, #{title})
@@ -160,7 +161,8 @@ public class BookController {
     
     
     
-    
+    // 마이바티스 사용저장2
+    //URL - http://localhost:8000/api/book/savebymapper2   
     @PostMapping(value = "book/savebymapper2")
     public ResponseEntity<Void> savebymapper2(@RequestBody HashMap<String, String> paramMap) {
         bookService.insertBookByMapper(paramMap);
@@ -179,7 +181,8 @@ public class BookController {
         return new ResponseEntity<>(books, HttpStatus.OK);
     }    
     
-    
+    // 마이바티스 리스트 출력2
+    // URL - http://localhost:8000/api/book/booksResultMap
     @GetMapping(value = "booksResultMap2")
     public ResponseEntity<Iterable<Map<String, Object>>> getBooksResultMap2() {
         log.info("Getting all books from the dB.");

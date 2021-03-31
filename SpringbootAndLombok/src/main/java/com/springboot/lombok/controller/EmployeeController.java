@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 
-//Lombok이 로거 필드를 생성
+//Lombok 로거 필드 생성
 @Slf4j
 @Controller
 public class EmployeeController {
@@ -26,38 +26,32 @@ public class EmployeeController {
     // URL - http://localhost:10092/
     @GetMapping(value = "/employee/sorted/")
     public String viewIndexPage() {
-        log.info("Redirecting the index page to the controller method for fetching the employees in a "
-                + "paginated fashion.");
-        // During the index page we are using the sort-field as id and sort-dir as asc.
+        log.info(" Index 페이지 sort-field(정렬필드) sort-dir(정렬방향)");
+        // Index 페이지 sort-field(정렬필드) sort-dir(정렬방향)
         return "redirect:/employee/page/1?sort-field=id&sort-dir=asc";
     }
  
-    // URL - http://localhost:10092/page/1?sort-field=firstName&sort-dir=desc
+    // URL - http://localhost:8080/page/1?sort-field=firstName&sort-dir=desc
     @GetMapping(value = "/employee/page/{page-number}")
     public String findPaginated(@PathVariable(name = "page-number") final int pageNo,
                                 @RequestParam(name = "sort-field") final String sortField,
                                 @RequestParam(name = "sort-dir") final String sortDir,
                                 final Model model) {
-        log.info("Getting the employees in a paginated way for page-number = {}, sort-field = {}, and "
-                + "sort-direction = {}.", pageNo, sortField, sortDir);
-        // Hardcoding the page-size to 15.
+        log.info("페이지 번호 = {}, 정렬 필드 = {} 및 정렬 방향 = {}.", pageNo, sortField, sortDir);
+
         final int pageSize = 15;
         final Page<Employee> page = service.findPaginated(pageNo, pageSize, sortField, sortDir);
         final List<Employee> listEmployees = page.getContent();
  
-        // Creating the model response.
-        // Note for simplicity purpose we are not making the use of ResponseDto here.
-        // In ideal cases the response will be encapsulated in a class.
-        // pagination parameters
-        model.addAttribute("currentPage", pageNo);
-        model.addAttribute("totalPages", page.getTotalPages());
-        model.addAttribute("totalItems", page.getTotalElements());
-        // sorting parameters
-        model.addAttribute("sortField", sortField);
-        model.addAttribute("sortDir", sortDir);
-        model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
-        // employees
-        model.addAttribute("listEmployees", listEmployees);
+        // model response 생성
+
+        model.addAttribute("currentPage", pageNo); // 현재 페이지
+        model.addAttribute("totalPages", page.getTotalPages()); // 전체 페이지
+        model.addAttribute("totalItems", page.getTotalElements()); // 전체 데이터 카운트
+        model.addAttribute("sortField", sortField); // 정렬필드
+        model.addAttribute("sortDir", sortDir); // 정렬방향
+        model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc"); // 정렬값
+        model.addAttribute("listEmployees", listEmployees); // 리스트 데이터 모델
         //return "index";
         return "thymeleaf/employeeindex";
     }	
