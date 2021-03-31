@@ -23,7 +23,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService service;
  
-    // URL - http://localhost:10092/
+    // URL - http://localhost:8000/employee/sorted/
     @GetMapping(value = "/employee/sorted/")
     public String viewIndexPage() {
         log.info(" Index 페이지 sort-field(정렬필드) sort-dir(정렬방향)");
@@ -31,7 +31,7 @@ public class EmployeeController {
         return "redirect:/employee/page/1?sort-field=id&sort-dir=asc";
     }
  
-    // URL - http://localhost:8080/page/1?sort-field=firstName&sort-dir=desc
+    // URL - http://localhost:8000/employee/page/1?sort-field=firstName&sort-dir=desc
     @GetMapping(value = "/employee/page/{page-number}")
     public String findPaginated(@PathVariable(name = "page-number") final int pageNo,
                                 @RequestParam(name = "sort-field") final String sortField,
