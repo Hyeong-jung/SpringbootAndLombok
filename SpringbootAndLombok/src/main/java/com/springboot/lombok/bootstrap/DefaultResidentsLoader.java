@@ -14,8 +14,9 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.util.Random;
 
+// lombok 로거 필드 생성
 @Slf4j
-//Causes Lombok to generate a constructor with 1 parameter for each field that requires special handling.
+// lombok 처리가 필요한 각 필드에 1 개 매개 변수 생성자 생성
 @RequiredArgsConstructor
 @Component
 public class DefaultResidentsLoader implements CommandLineRunner {
@@ -36,9 +37,9 @@ public class DefaultResidentsLoader implements CommandLineRunner {
             for (int x = 0; x < 100; x++) {
                 service.save(createNewResident());
             }
-            log.info("Default residents are successfully saved in the database.");
+            log.info("기본 DB 데이터 생성");
         } else {
-            log.info("Default residents are already present in the database.");
+        	log.info("기본 데이터 존재");
         }
     }    
      

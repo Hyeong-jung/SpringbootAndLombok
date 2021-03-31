@@ -12,9 +12,9 @@ import java.util.Random;
 
 
 
-//Causes Lombok to generate a logger field.
+// lombok 로거 필드 생성
 @Slf4j
-//Causes Lombok to generate a constructor with 1 parameter for each field that requires special handling.
+// lombok 처리가 필요한 각 필드에 1 개 매개 변수 생성자 생성
 @RequiredArgsConstructor
 @Component
 public class DefaultEmployeesLoader implements CommandLineRunner {
@@ -37,9 +37,9 @@ public class DefaultEmployeesLoader implements CommandLineRunner {
                 count = count + 1;
                 service.save(createNewEmployee());
             }
-            log.info("Total {} employees are saved in the database.", count);
+            log.info("총 {} 명의 직원 DB 저장", count);
         } else {
-            log.info("Default employees are already present in the database.");
+        	log.info("기본 데이터 존재");
         }
     }
     
