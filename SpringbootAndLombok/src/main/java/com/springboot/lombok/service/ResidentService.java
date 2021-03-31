@@ -24,13 +24,16 @@ public class ResidentService {
     }
  
     public long getResidentsCount() {
-        log.info("Finding the total count of residents from the dB.");
+        log.info("DB Residents 데이터 카운트");
         return repository.count();
     }
  
     public Page getPaginatedResidents(final int pageNumber, final int pageSize) {
-        log.info("Fetching the paginated residents from the dB.");
+    	
+    	log.info("DB 에서 Pageable 처리된  Residents 데이터 출력");
+        
         final Pageable pageable = PageRequest.of(pageNumber - 1, pageSize);
+        
         return repository.findAll(pageable);
     }
 	
