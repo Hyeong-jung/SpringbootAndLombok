@@ -11,5 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface TestMapper {
+	// Mybatis 테스트용 mapper 생성
 	List<TestVo> selectTest();
 }
