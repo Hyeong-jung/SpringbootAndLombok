@@ -26,6 +26,6 @@ public class SpringbootAndLombok {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootAndLombok.class, args);
-        log.info("Springboot and lombok application started successfully.");
+        log.info("Springboot And Lombok 프로젝트 시작");
     }
 }
