@@ -1,0 +1,132 @@
+server:
+  port: 8000
+
+
+spring:
+  application:
+    name: springboot-and-lombok
+  servlet:
+    multipart: 
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 215MB
+
+
+  ######### MariaDB Start #########      
+  datasource:
+    #driverClassName: org.mariadb.jdbc.Driver
+    #url: jdbc:log4jdbc:mariadb://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC    
+    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy # First
+    url: jdbc:log4jdbc:mariadb://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC # First
+    username: root
+    password: nice_2946
+    hikari:
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy # Second
+      jdbc-url: jdbc:log4jdbc:mariadb://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false # Second
+      username: root
+      password: nice_2946
+      maximum-pool-size: 10
+      connection-test-query: SELECT 1
+  ######### MariaDB End #########
+  
+  ######### MariaDB Start #########      
+  jpa:     
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        ddl-auto: create-drop
+        generate-ddl: true
+  ######### MariaDB End #########       
+
+  ######### MariaDB Start #########      
+  #jpa:
+    #datasource:
+      ##driverClassName: org.mariadb.jdbc.Driver
+      ##url: jdbc:log4jdbc:mariadb://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC    
+      #driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      #url: jdbc:log4jdbc:mariadb://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC
+      #username: root
+      #password: nice_2946
+      #profiles:
+        #active: local     
+    #properties:
+      #hibernate:
+        #dialect: org.hibernate.dialect.MariaDBDialect
+        #show_sql: true
+        #format_sql: true
+        #use_sql_comments: true
+        #ddl-auto: create-drop
+        #generate-ddl: true
+    #hikari:
+      #connection-test-query: SELECT 1
+  ######### MariaDB End #########     
+     
+  ######### H2DB Start #########      
+  ##jpa:
+    ##profiles:
+      ##active: local     
+    ##properties:
+      ##hibernate:
+        ##dialect: org.hibernate.dialect.MariaDBDialect
+        ##show_sql: true
+        ##format_sql: true
+        ##use_sql_comments: true
+  #datasource:
+    #username: book_admin
+    #password: book_admin@1234!     
+    #url: jdbc:h2:mem:testdb
+    #driverClassName: org.h2.Driver
+  #jpa:
+    #database-platform: org.hibernate.dialect.H2Dialect
+    #hibernate:    
+      #ddl-auto: create-drop
+    #properties:    
+      #hibernate:      
+        #show_sql: true
+  #h2:
+    #console:
+      #enabled: true
+      #path: /h2-console        
+  ######### H2DB End #########     
+     
+     
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  thymeleaf:
+    view-names: thymeleaf/*
+    suffix: .html
+    cache: false
+    check-template-location: true
+
+
+
+mybatis:
+  #type-aliases-package: com.god.bo.test.vo
+  type-aliases-package: com.springboot.lombok.model
+  mapper-locations: mybatis/**/*.xml
+
+devtools:
+  livereload:
+    enabled: true
+
+logging:
+  level:
+    root: info
+    com.springboot.lombok: info
+    com.springboot.lombok.controller: debug
+
+log4jdbc:
+  spylogdelegator:
+    name: net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+  dump:
+    sql:
+      maxlinelength: 0
+
+file:
+  upload-dir: ./uploads
+  #upload-dir: /Users/김형중/Documents

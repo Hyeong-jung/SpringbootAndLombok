@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+    <!--link href="https://examples.javacodegeeks.com/wp-content/litespeed/localres/stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style type="text/css">
+        th {
+            text-align: center;
+            font-weight: bold;
+            border-top: none !important;
+        }
+ 
+        th, td {
+            white-space: nowrap;
+        }
+ 
+        .mt-20 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+ 
+<body>
+<div class="container">
+    <h3 class="text-info text-center mt-20">Sorting Example : Employees</h3>
+    <!-- employees table -->
+    <table class="table table-striped mt-20 text-center" id="employeesTable">
+        <thead>
+        <tr>
+            <!-- sorting control via employee id -->
+            <th>
+                <a th:href="@{'/employee/page/' + ${currentPage} + '?sort-field=id&sort-dir=' + ${reverseSortDir}}">Id</a>
+            </th>
+            <!-- sorting control via employee firstname -->
+            <th>
+                <a th:href="@{'/employee/page/' + ${currentPage} + '?sort-field=firstName&sort-dir=' + ${reverseSortDir}}">First name</a>
+            </th>
+            <!-- sorting control via employee lastname -->
+            <th>
+                <a th:href="@{'/employee/page/' + ${currentPage} + '?sort-field=lastName&sort-dir=' + ${reverseSortDir}}">Last name</a>
+            </th>
+            <th>Email address</th>
+            <th>Gender</th>
+            <th>Phone number</th>
+            <th>Home address</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${listEmployees}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.gender}"></td>
+                <td th:text="${employee.email}"></td>
+                <td th:text="${employee.phoneNumber}"></td>
+                <td th:text="${employee.homeAddress}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- pagination control -->
+    <div th:if="${totalPages > 1}">
+        <div class="row col-sm-10">
+            <div class="col-sm-2">
+                Total employees: <strong>[[${totalItems}]]</strong>
+            </div>
+            <div class="col-sm-1">
+                    <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+                        <a th:href="@{'/employee/page/' + ${i} + '?sort-field=' + ${sortField} + '&sort-dir=' + ${sortDir}}"
+                           th:if="${currentPage != i}">[[${i}]]</a>
+                        <span th:unless="${currentPage != i}">[[${i}]]</span>
+                    </span>
+            </div>
+            <div class="col-sm-1">
+                <a th:href="@{'/employee/page/' + ${currentPage + 1} + '?sort-field=' + ${sortField} + '&sort-dir=' + ${sortDir}}"
+                   th:if="${currentPage < totalPages}">
+                    Next
+                </a>
+                <span th:unless="${currentPage < totalPages}">Next</span>
+            </div>
+            <div class="col-sm-1">
+                <a th:href="@{'/employee/page/' + ${totalPages} + '?sort-field=' + ${sortField} + '&sort-dir=' + ${sortDir}}"
+                   th:if="${currentPage < totalPages}">
+                    Last
+                </a>
+                <span th:unless="${currentPage < totalPages}">Last</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+ 
+</html>

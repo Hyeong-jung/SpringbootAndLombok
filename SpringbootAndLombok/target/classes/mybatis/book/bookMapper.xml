@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.lombok.mapper.BookMapper">
+	<select id="selectBook" resultType="com.springboot.lombok.model.Book">
+	SELECT 
+		id
+		, author
+		, genre
+		, published_on AS publishedOn
+		, publisher
+		, quantity
+		, title	
+	FROM book
+	</select>
+	
+	
+    <insert id="insertBookByMapper" parameterType="java.util.HashMap">
+        INSERT INTO book 
+        	(author, genre, published_on, publisher, quantity, title)
+        VALUES 
+        	(#{author}, #{genre}, #{published}, #{publisher}, #{quantity}, #{title})
+    </insert>
+    
+    <!--insert id="insertBookByMapper" parameterType="java.util.HashMap">
+	    <selectKey keyProperty="book_seq" resultType="integer" order="BEFORE">
+	   		 select book_seq.nextval FROM DUAL
+  		</selectKey>    
+        INSERT INTO book 
+        	(author, genre, published_on, publisher, quantity, title, id)
+        VALUES 
+        	(#{author}, #{genre}, #{published}, #{publisher}, #{quantity}, #{title}, #{book_seq})
+    </insert-->    
+    
+	<select id="selectBookResultMap" resultType="java.util.HashMap">
+	SELECT 
+		id
+		, author
+		, genre
+		, published_on AS publishedOn
+		, publisher
+		, quantity
+		, title	
+	FROM book
+	</select>    
+	
+</mapper>

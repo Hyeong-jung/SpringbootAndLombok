@@ -1,0 +1,101 @@
+INFO  21-03-05 14:34:22[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 23888 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-05 14:34:22[restartedMain] [SpringbootAndLombok:646] - No active profile set, falling back to default profiles: default
+INFO  21-03-05 14:34:22[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-03-05 14:34:22[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-03-05 14:34:23[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-05 14:34:23[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 110ms. Found 3 repository interfaces.
+DEBUG 21-03-05 14:34:23[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-03-05 14:34:24[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1b72b414] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-05 14:34:24[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-05 14:34:24[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-05 14:34:24[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-05 14:34:24[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-05 14:34:25[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-05 14:34:25[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-05 14:34:25[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 2450 ms
+INFO  21-03-05 14:34:25[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-03-05 14:34:25[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-03-05 14:34:25[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-05 14:34:25[restartedMain] [Version:46] - HHH000412: Hibernate Core {5.3.10.Final}
+INFO  21-03-05 14:34:25[restartedMain] [Environment:213] - HHH000206: hibernate.properties not found
+INFO  21-03-05 14:34:25[restartedMain] [Version:49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+INFO  21-03-05 14:34:25[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-05 14:34:26[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2e271443'
+INFO  21-03-05 14:34:26[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-05 14:34:26[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-05 14:34:27[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-05 14:34:27[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-05 14:34:27[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-05 14:34:27[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-05 14:34:27[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-05 14:34:27[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 5.86 seconds (JVM running for 7.21)
+INFO  21-03-05 14:34:27[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-05 14:34:27[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-05 14:34:28[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-05 14:34:28[restartedMain] [SpringbootAndLombok:24] - Springboot and lombok application started successfully.
+INFO  21-03-05 14:35:09[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-05 14:35:09[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-05 14:35:09[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 7 ms
+INFO  21-03-05 14:35:44[http-nio-8000-exec-6] [ResidentController:32] - Redirecting the index page to the controller method for fetching the residents in a paginated fashion.
+INFO  21-03-05 14:36:27[http-nio-8000-exec-10] [ResidentController:39] - Getting the residents in a paginated way for page-number = 1 and page-size = 100.
+INFO  21-03-05 14:36:27[http-nio-8000-exec-10] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-05 16:13:42[http-nio-8000-exec-3] [ResidentController:39] - Getting the residents in a paginated way for page-number = 1 and page-size = 100.
+INFO  21-03-05 16:13:42[http-nio-8000-exec-3] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-05 16:14:01[RMI TCP Connection(106)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-03-05 16:14:01[RMI TCP Connection(106)-127.0.0.1] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-05 16:14:01[RMI TCP Connection(106)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-05 16:14:01[RMI TCP Connection(106)-127.0.0.1] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-05 16:14:01[RMI TCP Connection(106)-127.0.0.1] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-05 16:14:01[RMI TCP Connection(106)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-03-05 16:14:01[RMI TCP Connection(106)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-03-05 17:15:25[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 1228 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-05 17:15:25[restartedMain] [SpringbootAndLombok:646] - No active profile set, falling back to default profiles: default
+INFO  21-03-05 17:15:26[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-03-05 17:15:26[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-03-05 17:15:26[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-05 17:15:27[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 97ms. Found 3 repository interfaces.
+DEBUG 21-03-05 17:15:27[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-03-05 17:15:27[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96b54265] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-05 17:15:27[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-05 17:15:27[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-05 17:15:27[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-05 17:15:27[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-05 17:15:28[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-05 17:15:28[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-05 17:15:28[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 2228 ms
+INFO  21-03-05 17:15:28[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-03-05 17:15:28[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-03-05 17:15:28[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-05 17:15:28[restartedMain] [Version:46] - HHH000412: Hibernate Core {5.3.10.Final}
+INFO  21-03-05 17:15:28[restartedMain] [Environment:213] - HHH000206: hibernate.properties not found
+INFO  21-03-05 17:15:28[restartedMain] [Version:49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+INFO  21-03-05 17:15:29[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-05 17:15:29[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3e40b20d'
+INFO  21-03-05 17:15:29[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-05 17:15:29[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-05 17:15:30[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-05 17:15:30[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-05 17:15:30[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-05 17:15:30[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-05 17:15:30[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-05 17:15:30[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 5.392 seconds (JVM running for 7.137)
+INFO  21-03-05 17:15:30[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-05 17:15:30[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-05 17:15:31[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-05 17:15:31[restartedMain] [SpringbootAndLombok:24] - Springboot and lombok application started successfully.
+INFO  21-03-05 17:15:34[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-05 17:15:34[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-05 17:15:34[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 7 ms
+INFO  21-03-05 17:15:34[http-nio-8000-exec-1] [ResidentController:39] - Getting the residents in a paginated way for page-number = 1 and page-size = 100.
+INFO  21-03-05 17:15:34[http-nio-8000-exec-1] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-05 17:24:14[RMI TCP Connection(16)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-03-05 17:24:14[RMI TCP Connection(16)-127.0.0.1] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-05 17:24:14[RMI TCP Connection(16)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-05 17:24:14[RMI TCP Connection(16)-127.0.0.1] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-05 17:24:14[RMI TCP Connection(16)-127.0.0.1] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-05 17:24:14[RMI TCP Connection(16)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-03-05 17:24:14[RMI TCP Connection(16)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.

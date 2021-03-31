@@ -1,0 +1,274 @@
+INFO  21-03-30 16:18:50[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 25640 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-30 16:18:50[restartedMain] [SpringbootAndLombok:650] - The following profiles are active: local
+INFO  21-03-30 16:18:50[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-03-30 16:18:50[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-03-30 16:18:51[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-30 16:18:51[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 130ms. Found 4 repository interfaces.
+DEBUG 21-03-30 16:18:51[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-03-30 16:18:51[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f2dfb690] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-30 16:18:52[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-30 16:18:52[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-30 16:18:52[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-30 16:18:52[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-30 16:18:52[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-30 16:18:52[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-30 16:18:52[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 2310 ms
+INFO  21-03-30 16:18:52[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+WARN  21-03-30 16:18:52[restartedMain] [AnnotationConfigServletWebServerApplicationContext:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactoryBuilder' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactoryBuilder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.RuntimeException: Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl, jdbc:h2:mem:testdb
+INFO  21-03-30 16:18:52[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-03-30 16:18:52[restartedMain] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': java.lang.RuntimeException: Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl, jdbc:h2:mem:testdb
+INFO  21-03-30 16:18:52[restartedMain] [StandardService:173] - Stopping service [Tomcat]
+INFO  21-03-30 16:18:52[restartedMain] [ConditionEvaluationReportLoggingListener:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ERROR 21-03-30 16:18:52[restartedMain] [SpringApplication:821] - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactoryBuilder' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactoryBuilder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.RuntimeException: Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl, jdbc:h2:mem:testdb
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.springboot.lombok.SpringbootAndLombok.main(SpringbootAndLombok.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactoryBuilder' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactoryBuilder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.RuntimeException: Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl, jdbc:h2:mem:testdb
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.RuntimeException: Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl, jdbc:h2:mem:testdb
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.RuntimeException: Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl, jdbc:h2:mem:testdb
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 52 common frames omitted
+Caused by: java.lang.RuntimeException: Driver net.sf.log4jdbc.sql.jdbcapi.DriverSpy claims to not accept jdbcUrl, jdbc:h2:mem:testdb
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:108)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:336)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:109)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:112)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$11b678ff.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$11b678ff$$FastClassBySpringCGLIB$$2ad7c544.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$11b678ff.jpaVendorAdapter(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 53 common frames omitted
+INFO  21-03-30 16:19:31[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 29112 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-30 16:19:31[restartedMain] [SpringbootAndLombok:650] - The following profiles are active: local
+INFO  21-03-30 16:19:31[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-03-30 16:19:31[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-03-30 16:19:32[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-30 16:19:32[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 110ms. Found 4 repository interfaces.
+DEBUG 21-03-30 16:19:32[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-03-30 16:19:32[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b9c61095] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-30 16:19:33[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-30 16:19:33[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-30 16:19:33[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-30 16:19:33[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-30 16:19:33[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-30 16:19:33[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-30 16:19:33[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 2118 ms
+INFO  21-03-30 16:19:33[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-03-30 16:19:33[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-03-30 16:19:34[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-30 16:19:34[restartedMain] [Version:46] - HHH000412: Hibernate Core {5.3.10.Final}
+INFO  21-03-30 16:19:34[restartedMain] [Environment:213] - HHH000206: hibernate.properties not found
+INFO  21-03-30 16:19:34[restartedMain] [Version:49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+INFO  21-03-30 16:19:34[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-30 16:19:35[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@535f7620'
+INFO  21-03-30 16:19:35[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-30 16:19:35[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-30 16:19:35[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-30 16:19:35[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-30 16:19:36[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-30 16:19:36[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-30 16:19:36[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-30 16:19:36[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 5.231 seconds (JVM running for 6.322)
+INFO  21-03-30 16:19:36[restartedMain] [EmployeeService:27] - Finding the total count of employees from the dB.
+INFO  21-03-30 16:19:36[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-30 16:19:37[restartedMain] [DefaultEmployeesLoader:40] - Total 100 employees are saved in the database.
+INFO  21-03-30 16:19:37[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-30 16:19:37[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-30 16:19:37[restartedMain] [SpringbootAndLombok:29] - Springboot and lombok application started successfully.
+INFO  21-03-30 16:19:55[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-30 16:19:55[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-30 16:19:55[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 6 ms
+INFO  21-03-30 16:21:08[http-nio-8000-exec-6] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:21:44[http-nio-8000-exec-7] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:22:01[http-nio-8000-exec-1] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:22:29[RMI TCP Connection(9)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-03-30 16:22:29[RMI TCP Connection(9)-127.0.0.1] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-30 16:22:29[RMI TCP Connection(9)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-30 16:22:29[RMI TCP Connection(9)-127.0.0.1] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-30 16:22:29[RMI TCP Connection(9)-127.0.0.1] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-30 16:22:29[RMI TCP Connection(9)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-03-30 16:22:29[RMI TCP Connection(9)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-03-30 16:29:49[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 12924 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-30 16:29:49[restartedMain] [SpringbootAndLombok:650] - The following profiles are active: local
+INFO  21-03-30 16:29:49[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-03-30 16:29:49[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-03-30 16:29:50[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-30 16:29:50[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 108ms. Found 4 repository interfaces.
+DEBUG 21-03-30 16:29:50[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-03-30 16:29:50[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$138655e7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-30 16:29:51[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-30 16:29:51[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-30 16:29:51[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-30 16:29:51[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-30 16:29:51[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-30 16:29:51[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-30 16:29:51[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 2141 ms
+INFO  21-03-30 16:29:51[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-03-30 16:29:51[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-03-30 16:29:51[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-30 16:29:51[restartedMain] [Version:46] - HHH000412: Hibernate Core {5.3.10.Final}
+INFO  21-03-30 16:29:51[restartedMain] [Environment:213] - HHH000206: hibernate.properties not found
+INFO  21-03-30 16:29:51[restartedMain] [Version:49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+INFO  21-03-30 16:29:52[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-30 16:29:52[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@50d8539f'
+INFO  21-03-30 16:29:52[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-30 16:29:52[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-30 16:29:53[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-30 16:29:53[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-30 16:29:53[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-30 16:29:53[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-30 16:29:53[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-30 16:29:53[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 5.01 seconds (JVM running for 6.149)
+INFO  21-03-30 16:29:53[restartedMain] [EmployeeService:27] - Finding the total count of employees from the dB.
+INFO  21-03-30 16:29:53[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-30 16:29:54[restartedMain] [DefaultEmployeesLoader:40] - Total 100 employees are saved in the database.
+INFO  21-03-30 16:29:54[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-30 16:29:54[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-30 16:29:54[restartedMain] [SpringbootAndLombok:29] - Springboot and lombok application started successfully.
+INFO  21-03-30 16:30:00[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-30 16:30:00[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-30 16:30:00[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 6 ms
+INFO  21-03-30 16:30:00[http-nio-8000-exec-1] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:30:01[http-nio-8000-exec-3] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:30:05[http-nio-8000-exec-1] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:30:06[http-nio-8000-exec-3] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:30:06[http-nio-8000-exec-5] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:30:10[http-nio-8000-exec-1] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:30:11[http-nio-8000-exec-3] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 16:30:40[RMI TCP Connection(7)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-03-30 16:30:40[RMI TCP Connection(7)-127.0.0.1] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-30 16:30:40[RMI TCP Connection(7)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-30 16:30:40[RMI TCP Connection(7)-127.0.0.1] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-30 16:30:40[RMI TCP Connection(7)-127.0.0.1] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-30 16:30:40[RMI TCP Connection(7)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-03-30 16:30:40[RMI TCP Connection(7)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-03-30 17:01:36[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 13460 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-30 17:01:36[restartedMain] [SpringbootAndLombok:650] - The following profiles are active: local
+INFO  21-03-30 17:01:36[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-03-30 17:01:36[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-03-30 17:01:37[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-30 17:01:37[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 117ms. Found 4 repository interfaces.
+DEBUG 21-03-30 17:01:37[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-03-30 17:01:37[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb7eed46] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-30 17:01:38[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-30 17:01:38[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-30 17:01:38[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-30 17:01:38[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-30 17:01:38[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-30 17:01:38[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-30 17:01:38[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 2175 ms
+INFO  21-03-30 17:01:38[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-03-30 17:01:38[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-03-30 17:01:38[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-30 17:01:38[restartedMain] [Version:46] - HHH000412: Hibernate Core {5.3.10.Final}
+INFO  21-03-30 17:01:38[restartedMain] [Environment:213] - HHH000206: hibernate.properties not found
+INFO  21-03-30 17:01:38[restartedMain] [Version:49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+INFO  21-03-30 17:01:39[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-30 17:01:39[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@877d05b'
+INFO  21-03-30 17:01:39[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-30 17:01:39[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-30 17:01:40[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-30 17:01:40[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-30 17:01:40[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-30 17:01:40[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-30 17:01:40[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-30 17:01:40[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 5.02 seconds (JVM running for 6.086)
+INFO  21-03-30 17:01:40[restartedMain] [EmployeeService:27] - Finding the total count of employees from the dB.
+INFO  21-03-30 17:01:40[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-30 17:01:41[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-30 17:01:41[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-30 17:01:41[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 8 ms
+INFO  21-03-30 17:01:41[http-nio-8000-exec-1] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 17:01:41[restartedMain] [DefaultEmployeesLoader:40] - Total 100 employees are saved in the database.
+INFO  21-03-30 17:01:41[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-30 17:01:42[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-30 17:01:42[restartedMain] [SpringbootAndLombok:29] - Springboot and lombok application started successfully.
+INFO  21-03-30 17:01:49[http-nio-8000-exec-3] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 17:01:57[http-nio-8000-exec-4] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 17:01:58[http-nio-8000-exec-7] [BookController:185] - Getting all books from the dB.
+INFO  21-03-30 17:18:49[RMI TCP Connection(24)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-03-30 17:18:49[RMI TCP Connection(24)-127.0.0.1] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-30 17:18:49[RMI TCP Connection(24)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-30 17:18:49[RMI TCP Connection(24)-127.0.0.1] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-30 17:18:50[RMI TCP Connection(24)-127.0.0.1] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-30 17:18:50[RMI TCP Connection(24)-127.0.0.1] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-03-30 17:18:50[RMI TCP Connection(24)-127.0.0.1] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.

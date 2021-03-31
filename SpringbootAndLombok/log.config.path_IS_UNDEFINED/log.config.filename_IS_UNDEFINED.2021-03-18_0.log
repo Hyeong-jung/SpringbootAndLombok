@@ -1,0 +1,205 @@
+INFO  21-03-18 15:57:13[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 29772 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-18 15:57:13[restartedMain] [SpringbootAndLombok:646] - No active profile set, falling back to default profiles: default
+INFO  21-03-18 15:57:13[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+INFO  21-03-18 15:57:13[restartedMain] [DevToolsPropertyDefaultsPostProcessor:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+INFO  21-03-18 15:57:14[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-18 15:57:14[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 131ms. Found 4 repository interfaces.
+DEBUG 21-03-18 15:57:14[restartedMain] [LogFactory:105] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+INFO  21-03-18 15:57:15[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$181e3dca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-18 15:57:15[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-18 15:57:15[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-18 15:57:15[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-18 15:57:15[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-18 15:57:16[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-18 15:57:16[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-18 15:57:16[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 2551 ms
+INFO  21-03-18 15:57:16[restartedMain] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  21-03-18 15:57:16[restartedMain] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  21-03-18 15:57:16[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-18 15:57:16[restartedMain] [Version:46] - HHH000412: Hibernate Core {5.3.10.Final}
+INFO  21-03-18 15:57:16[restartedMain] [Environment:213] - HHH000206: hibernate.properties not found
+INFO  21-03-18 15:57:16[restartedMain] [Version:49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+INFO  21-03-18 15:57:17[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-18 15:57:17[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@520b2a10'
+INFO  21-03-18 15:57:17[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-18 15:57:17[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-18 15:57:18[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-18 15:57:18[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-18 15:57:18[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-18 15:57:18[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-18 15:57:19[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-18 15:57:19[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 6.117 seconds (JVM running for 7.467)
+INFO  21-03-18 15:57:19[restartedMain] [EmployeeService:27] - Finding the total count of employees from the dB.
+INFO  21-03-18 15:57:19[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-18 15:57:20[restartedMain] [DefaultEmployeesLoader:40] - Total 100 employees are saved in the database.
+INFO  21-03-18 15:57:20[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-18 15:57:20[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-18 15:57:20[restartedMain] [SpringbootAndLombok:24] - Springboot and lombok application started successfully.
+INFO  21-03-18 15:58:41[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-18 15:58:41[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-18 15:58:41[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 7 ms
+INFO  21-03-18 15:58:41[http-nio-8000-exec-1] [EmployeeController:29] - Redirecting the index page to the controller method for fetching the employees in a paginated fashion.
+INFO  21-03-18 15:59:19[http-nio-8000-exec-8] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 15:59:19[http-nio-8000-exec-8] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:00:37[http-nio-8000-exec-3] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:00:37[http-nio-8000-exec-3] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:01:48[http-nio-8000-exec-8] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:01:48[http-nio-8000-exec-8] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:01:50[http-nio-8000-exec-10] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 2, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:01:50[http-nio-8000-exec-10] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:01:51[http-nio-8000-exec-2] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 3, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:01:51[http-nio-8000-exec-2] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:01:53[http-nio-8000-exec-1] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 6, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:01:53[http-nio-8000-exec-1] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:01:54[http-nio-8000-exec-3] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 7, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:01:54[http-nio-8000-exec-3] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:01:55[http-nio-8000-exec-4] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:01:55[http-nio-8000-exec-4] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:07[http-nio-8000-exec-2] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:03:07[http-nio-8000-exec-2] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:08[http-nio-8000-exec-3] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = lastName, and sort-direction = desc.
+INFO  21-03-18 16:03:08[http-nio-8000-exec-3] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:09[http-nio-8000-exec-4] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = firstName, and sort-direction = asc.
+INFO  21-03-18 16:03:09[http-nio-8000-exec-4] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:11[http-nio-8000-exec-5] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = id, and sort-direction = desc.
+INFO  21-03-18 16:03:11[http-nio-8000-exec-5] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:11[http-nio-8000-exec-7] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = firstName, and sort-direction = asc.
+INFO  21-03-18 16:03:11[http-nio-8000-exec-7] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:12[http-nio-8000-exec-6] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = lastName, and sort-direction = desc.
+INFO  21-03-18 16:03:12[http-nio-8000-exec-6] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:15[http-nio-8000-exec-10] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 2, sort-field = lastName, and sort-direction = desc.
+INFO  21-03-18 16:03:15[http-nio-8000-exec-10] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:16[http-nio-8000-exec-2] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 7, sort-field = lastName, and sort-direction = desc.
+INFO  21-03-18 16:03:16[http-nio-8000-exec-2] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:03:19[http-nio-8000-exec-1] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = lastName, and sort-direction = desc.
+INFO  21-03-18 16:03:19[http-nio-8000-exec-1] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:04:11[http-nio-8000-exec-5] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = lastName, and sort-direction = desc.
+INFO  21-03-18 16:04:11[http-nio-8000-exec-5] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:04:29[http-nio-8000-exec-7] [ResidentController:32] - Redirecting the index page to the controller method for fetching the residents in a paginated fashion.
+INFO  21-03-18 16:04:45[Thread-5] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-18 16:04:45[Thread-5] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-18 16:04:45[Thread-5] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-18 16:04:45[Thread-5] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-18 16:04:45[Thread-5] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  21-03-18 16:04:45[Thread-5] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  21-03-18 16:04:46[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 29772 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-18 16:04:46[restartedMain] [SpringbootAndLombok:646] - No active profile set, falling back to default profiles: default
+INFO  21-03-18 16:04:46[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-18 16:04:46[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 92ms. Found 4 repository interfaces.
+INFO  21-03-18 16:04:46[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$181e3dca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-18 16:04:46[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-18 16:04:46[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-18 16:04:46[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-18 16:04:46[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-18 16:04:47[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-18 16:04:47[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-18 16:04:47[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 1112 ms
+INFO  21-03-18 16:04:47[restartedMain] [HikariDataSource:110] - HikariPool-2 - Starting...
+INFO  21-03-18 16:04:47[restartedMain] [HikariDataSource:123] - HikariPool-2 - Start completed.
+INFO  21-03-18 16:04:47[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-18 16:04:47[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-18 16:04:47[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@520b2a10'
+INFO  21-03-18 16:04:47[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-18 16:04:47[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-18 16:04:47[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-18 16:04:47[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-18 16:04:47[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-18 16:04:47[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-18 16:04:47[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-18 16:04:47[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 1.868 seconds (JVM running for 456.203)
+INFO  21-03-18 16:04:47[restartedMain] [EmployeeService:27] - Finding the total count of employees from the dB.
+INFO  21-03-18 16:04:47[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-18 16:04:48[restartedMain] [DefaultEmployeesLoader:40] - Total 100 employees are saved in the database.
+INFO  21-03-18 16:04:48[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-18 16:04:48[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-18 16:04:48[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-03-18 16:04:48[restartedMain] [SpringbootAndLombok:24] - Springboot and lombok application started successfully.
+INFO  21-03-18 16:05:02[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-18 16:05:02[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-18 16:05:02[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 2 ms
+INFO  21-03-18 16:05:02[http-nio-8000-exec-1] [ResidentController:32] - Redirecting the index page to the controller method for fetching the residents in a paginated fashion.
+INFO  21-03-18 16:05:02[http-nio-8000-exec-2] [ResidentController:39] - Getting the residents in a paginated way for page-number = 1 and page-size = 10.
+INFO  21-03-18 16:05:02[http-nio-8000-exec-2] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:05:18[Thread-10] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-18 16:05:18[Thread-10] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-18 16:05:18[Thread-10] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-18 16:05:18[Thread-10] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-18 16:05:18[Thread-10] [HikariDataSource:350] - HikariPool-2 - Shutdown initiated...
+INFO  21-03-18 16:05:18[Thread-10] [HikariDataSource:352] - HikariPool-2 - Shutdown completed.
+INFO  21-03-18 16:05:18[restartedMain] [SpringbootAndLombok:50] - Starting SpringbootAndLombok on HJKim10-PC with PID 29772 (C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok\target\classes started by 김형중 in C:\STS\workspace\SpringbootAndLombok.zip_expanded\SpringbootAndLombok)
+INFO  21-03-18 16:05:18[restartedMain] [SpringbootAndLombok:646] - No active profile set, falling back to default profiles: default
+INFO  21-03-18 16:05:19[restartedMain] [RepositoryConfigurationDelegate:126] - Bootstrapping Spring Data repositories in DEFAULT mode.
+INFO  21-03-18 16:05:19[restartedMain] [RepositoryConfigurationDelegate:182] - Finished Spring Data repository scanning in 86ms. Found 4 repository interfaces.
+INFO  21-03-18 16:05:19[restartedMain] [PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$181e3dca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  21-03-18 16:05:19[restartedMain] [TomcatWebServer:90] - Tomcat initialized with port(s): 8000 (http)
+INFO  21-03-18 16:05:19[restartedMain] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8000"]
+INFO  21-03-18 16:05:19[restartedMain] [StandardService:173] - Starting service [Tomcat]
+INFO  21-03-18 16:05:19[restartedMain] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+INFO  21-03-18 16:05:19[restartedMain] [TldScanner:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  21-03-18 16:05:19[restartedMain] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  21-03-18 16:05:19[restartedMain] [ContextLoader:283] - Root WebApplicationContext: initialization completed in 969 ms
+INFO  21-03-18 16:05:19[restartedMain] [HikariDataSource:110] - HikariPool-3 - Starting...
+INFO  21-03-18 16:05:19[restartedMain] [HikariDataSource:123] - HikariPool-3 - Start completed.
+INFO  21-03-18 16:05:19[restartedMain] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  21-03-18 16:05:19[restartedMain] [Dialect:157] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  21-03-18 16:05:19[restartedMain] [SchemaCreatorImpl:489] - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@520b2a10'
+INFO  21-03-18 16:05:19[restartedMain] [LocalContainerEntityManagerFactoryBean:415] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-18 16:05:19[restartedMain] [OptionalLiveReloadServer:57] - LiveReload server is running on port 35729
+INFO  21-03-18 16:05:19[restartedMain] [ThreadPoolTaskExecutor:171] - Initializing ExecutorService 'applicationTaskExecutor'
+WARN  21-03-18 16:05:19[restartedMain] [JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:225] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  21-03-18 16:05:19[restartedMain] [WelcomePageHandlerMapping:54] - Adding welcome page: class path resource [static/index.html]
+INFO  21-03-18 16:05:20[restartedMain] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8000"]
+INFO  21-03-18 16:05:20[restartedMain] [TomcatWebServer:202] - Tomcat started on port(s): 8000 (http) with context path ''
+INFO  21-03-18 16:05:20[restartedMain] [SpringbootAndLombok:59] - Started SpringbootAndLombok in 1.712 seconds (JVM running for 488.579)
+INFO  21-03-18 16:05:20[restartedMain] [EmployeeService:27] - Finding the total count of employees from the dB.
+INFO  21-03-18 16:05:20[restartedMain] [QueryTranslatorFactoryInitiator:47] - HHH000397: Using ASTQueryTranslatorFactory
+INFO  21-03-18 16:05:20[restartedMain] [DefaultEmployeesLoader:40] - Total 100 employees are saved in the database.
+INFO  21-03-18 16:05:20[restartedMain] [ResidentService:27] - Finding the total count of residents from the dB.
+INFO  21-03-18 16:05:20[restartedMain] [DefaultResidentsLoader:39] - Default residents are successfully saved in the database.
+INFO  21-03-18 16:05:20[restartedMain] [ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged
+INFO  21-03-18 16:05:20[restartedMain] [SpringbootAndLombok:24] - Springboot and lombok application started successfully.
+INFO  21-03-18 16:05:32[http-nio-8000-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  21-03-18 16:05:32[http-nio-8000-exec-1] [DispatcherServlet:524] - Initializing Servlet 'dispatcherServlet'
+INFO  21-03-18 16:05:32[http-nio-8000-exec-1] [DispatcherServlet:546] - Completed initialization in 2 ms
+INFO  21-03-18 16:05:32[http-nio-8000-exec-1] [EmployeeController:29] - Redirecting the index page to the controller method for fetching the employees in a paginated fashion.
+INFO  21-03-18 16:05:32[http-nio-8000-exec-2] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 1, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:05:32[http-nio-8000-exec-2] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:05:37[http-nio-8000-exec-3] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 2, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:05:37[http-nio-8000-exec-3] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:05:41[http-nio-8000-exec-4] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 3, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:05:41[http-nio-8000-exec-4] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:05:43[http-nio-8000-exec-5] [EmployeeController:41] - Getting the employees in a paginated way for page-number = 6, sort-field = id, and sort-direction = asc.
+INFO  21-03-18 16:05:43[http-nio-8000-exec-5] [EmployeeService:33] - Fetching the paginated employees from the dB.
+INFO  21-03-18 16:13:14[http-nio-8000-exec-7] [ResidentController:39] - Getting the residents in a paginated way for page-number = 2 and page-size = 10.
+INFO  21-03-18 16:13:14[http-nio-8000-exec-7] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:15[http-nio-8000-exec-9] [ResidentController:39] - Getting the residents in a paginated way for page-number = 3 and page-size = 10.
+INFO  21-03-18 16:13:15[http-nio-8000-exec-9] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:15[http-nio-8000-exec-10] [ResidentController:39] - Getting the residents in a paginated way for page-number = 4 and page-size = 10.
+INFO  21-03-18 16:13:15[http-nio-8000-exec-10] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:16[http-nio-8000-exec-1] [ResidentController:39] - Getting the residents in a paginated way for page-number = 5 and page-size = 10.
+INFO  21-03-18 16:13:16[http-nio-8000-exec-1] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:17[http-nio-8000-exec-2] [ResidentController:39] - Getting the residents in a paginated way for page-number = 6 and page-size = 10.
+INFO  21-03-18 16:13:17[http-nio-8000-exec-2] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:18[http-nio-8000-exec-3] [ResidentController:39] - Getting the residents in a paginated way for page-number = 9 and page-size = 10.
+INFO  21-03-18 16:13:18[http-nio-8000-exec-3] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:18[http-nio-8000-exec-4] [ResidentController:39] - Getting the residents in a paginated way for page-number = 10 and page-size = 10.
+INFO  21-03-18 16:13:18[http-nio-8000-exec-4] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:20[http-nio-8000-exec-5] [ResidentController:39] - Getting the residents in a paginated way for page-number = 9 and page-size = 10.
+INFO  21-03-18 16:13:20[http-nio-8000-exec-5] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:21[http-nio-8000-exec-6] [ResidentController:39] - Getting the residents in a paginated way for page-number = 7 and page-size = 10.
+INFO  21-03-18 16:13:21[http-nio-8000-exec-6] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:21[http-nio-8000-exec-8] [ResidentController:39] - Getting the residents in a paginated way for page-number = 6 and page-size = 10.
+INFO  21-03-18 16:13:21[http-nio-8000-exec-8] [ResidentService:32] - Fetching the paginated residents from the dB.
+INFO  21-03-18 16:13:37[RMI TCP Connection(27)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] - Application shutdown requested.
+INFO  21-03-18 16:13:37[RMI TCP Connection(27)-127.0.0.1] [ThreadPoolTaskExecutor:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+INFO  21-03-18 16:13:37[RMI TCP Connection(27)-127.0.0.1] [LocalContainerEntityManagerFactoryBean:597] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  21-03-18 16:13:37[RMI TCP Connection(27)-127.0.0.1] [SchemaDropperImpl$DelayedDropActionImpl:524] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+INFO  21-03-18 16:13:37[RMI TCP Connection(27)-127.0.0.1] [DisposableBeanAdapter:267] - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+INFO  21-03-18 16:13:37[RMI TCP Connection(27)-127.0.0.1] [HikariDataSource:350] - HikariPool-3 - Shutdown initiated...
+INFO  21-03-18 16:13:37[RMI TCP Connection(27)-127.0.0.1] [HikariDataSource:352] - HikariPool-3 - Shutdown completed.

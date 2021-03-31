@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function() {
+	console.log("Document Ready!");
+	alert( "Document Ready!" );
+    
+    $.ajax({ 
+    	type: "GET", 
+    	url: "/valueTest", 
+    	success: (data) => { 
+    		console.log(data); 
+    		alert(data);
+    		$('#contents').html(data); 
+    	} 
+    });    
+});
+</script>
+</head>
+<body>
+	<h1>http://localhost:10093/home</h1>
+	<h1>Test Controller Home Hello World!</h1>
+	<div id="contents"> </div>	
+</body>
+</html>
