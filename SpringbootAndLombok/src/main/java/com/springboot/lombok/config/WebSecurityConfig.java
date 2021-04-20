@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	  @Override
 	  protected void configure(HttpSecurity http) throws Exception { // http 관련 인증 설정
-	    http
+	    /*http
 	          .authorizeRequests() // 접근 인증 설정
 	            .antMatchers("/login", "/signup", "/user").permitAll() // 전체 접근 허용
 	            .antMatchers("/").hasRole("USER") // USER + ADMIN 접근 가능
@@ -45,12 +45,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	          .logout() // 로그아웃
 	            .logoutSuccessUrl("/login") // 로그아웃 성공시 리다이렉트 주소
 	            .invalidateHttpSession(true) // 세션 날리기
-	    ;
+	    ;*/
 	  }
 
 	  @Override
 	  public void configure(AuthenticationManagerBuilder auth) throws Exception { // 필요한 정보들을 가져오는 곳
-	    auth.userDetailsService(userService).passwordEncoder(new BCryptPasswordEncoder()); // 해당 서비스(userService)에서는 UserDetailsService를 implements해서 loadUserByUsername() 구현해야함 (서비스 참고)
+	    //auth.userDetailsService(userService).passwordEncoder(new BCryptPasswordEncoder()); // 해당 서비스(userService)에서는 UserDetailsService를 implements해서 loadUserByUsername() 구현해야함 (서비스 참고)
 	  }
 	
 
