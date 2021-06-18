@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	  @Override
 	  public void configure(WebSecurity web) { // static 하위 파일 목록(css, js, img) 인증 무시
-	    web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "/h2-console/**");
+	    web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "/h2-console/**,/fileapi/**,/reactapi/**");
 	  }
 
 	  @Override
@@ -46,12 +46,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	            .logoutSuccessUrl("/login") // 로그아웃 성공시 리다이렉트 주소
 	            .invalidateHttpSession(true) // 세션 날리기
 	    ;*/
+		  
+		  //http.authorizeRequests().anyRequest().permitAll();
+			http.csrf().disable().cors().disable()
+					.headers().frameOptions().disable().and()
+					.authorizeRequests().antMatchers("/**").permitAll();
 	  }
 
 	  @Override
 	  public void configure(AuthenticationManagerBuilder auth) throws Exception { // 필요한 정보들을 가져오는 곳
 	    //auth.userDetailsService(userService).passwordEncoder(new BCryptPasswordEncoder()); // 해당 서비스(userService)에서는 UserDetailsService를 implements해서 loadUserByUsername() 구현해야함 (서비스 참고)
 	  }
-	
+
 
 }
