@@ -26,7 +26,7 @@ public class DefaultBookLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        //loadBooksData();
+        loadBooksData();
     }
 
     private void loadBooksData() {
