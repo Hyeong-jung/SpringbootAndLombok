@@ -174,6 +174,4 @@ public class PagingUtil {
 	public boolean isNext() {
 		return isNext;
 	}
-	
-	
 }
