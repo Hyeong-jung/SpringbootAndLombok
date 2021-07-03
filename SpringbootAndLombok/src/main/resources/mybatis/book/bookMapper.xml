@@ -42,5 +42,165 @@
 		, title	
 	FROM book
 	</select>    
+
+
+
+	<select id="selectBookByHashMap" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+	<![CDATA[
+	SELECT 
+		id
+		, author
+		, genre
+		, published_on AS publishedOn
+		, publisher
+		, quantity
+		, title	
+	FROM book
+	WHERE id = #{id}
+	]]>
+	</select>
+
+
+	<select id="selectBookForEachByHashMap" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+
+	SELECT 
+		id
+		, author
+		, genre
+		, published_on AS publishedOn
+		, publisher
+		, quantity
+		, title	
+	FROM book
+	WHERE 1 = 1
+	<if test="genre != null" >
+		<trim prefix="WHERE" prefixOverrides="AND">
+			<foreach open="AND (" separator=" OR " close=")" collection="noList" item="item" index="index">
+			genre = '${noList[index]}'
+			</foreach>
+			<foreach item="item" index="index" collection="noList" open="(" separator="," close=")">
+			#{item}
+			</foreach>
+		</trim>
+	</if>
+	</select>
+
+
+
+	<!--// selectBookSelectClauseChoose include Start //-->
+	<select id="selectBookSelectClauseChoose" resultType="hashmap" parameterType="hashmap" >
+		SELECT 
+			*
+		FROM 
+		(
+			<include refid="selectBookSelectClauseChooseField"/>
+			<include refid="selectBookSelectClauseChooseWhere"/>
+		) X
+	</select>
 	
+	<sql id="selectBookSelectClauseChooseField">
+	<![CDATA[
+	SELECT 
+		id
+		, author
+		, genre
+		, published_on AS publishedOn
+		, publisher
+		, quantity
+		, title	
+	FROM book
+	]]>
+	</sql>
+	
+	<sql id="selectBookSelectClauseChooseWhere">
+		<trim prefix="WHERE" prefixOverrides="AND">
+			<choose>
+				<when test="StartPublished != null  and StartPublished != ''  and  EndPublished != null  and EndPublished != '' ">
+					AND published_on  
+					--BETWEEN CONVERT(VARCHAR(12),#{publishedOn},112) AND CONVERT(VARCHAR(12),#{EndPublished},112)
+					BETWEEN #{publishedOn} AND #{EndPublished}
+				</when>
+				<when test=" StartPublished != null  and StartPublished != '' ">
+					<![CDATA[
+					--AND published_on  >=  CONVERT(VARCHAR(12),#{StartPublished},112)
+					AND published_on  >=  #{StartPublished}
+					]]>
+				</when>
+				<when test=" EndPublished != null  and EndPublished != '' ">
+					<![CDATA[
+					--AND published_on <=  CONVERT(VARCHAR(12),#{EndPublished},112)
+					AND published_on <=  #{EndPublished}
+					]]>
+				</when>
+			</choose>		
+		</trim>
+	</sql>
+	<!--// selectBookSelectClauseChoose include End //-->
+
+
+	<!--// Insert Sequence Start //-->
+    <insert id="insertBookBeforeSeqByMapper" parameterType="java.util.HashMap">
+	    <selectKey keyProperty="book_seq" resultType="integer" order="BEFORE">
+	   		 select book_seq.nextval FROM DUAL
+  		</selectKey>
+        INSERT INTO book 
+        	(author, genre, published_on, publisher, quantity, title, id)
+        VALUES 
+        	(#{author}, #{genre}, #{published}, #{publisher}, #{quantity}, #{title}, #{book_seq})
+    </insert>
+    <!--// Insert Sequence End //-->
+
+	<!--// Insert Identity Start //-->
+    <insert id="insertAfterIdentityByMapper" parameterType="java.util.HashMap">
+        INSERT INTO book 
+        	(author, genre, published_on, publisher, quantity, title, id)
+        VALUES 
+        	(#{author}, #{genre}, #{published}, #{publisher}, #{quantity}, #{title})
+
+		<selectKey databaseId="mssql" keyProperty="book_seq" resultType="int" order="AFTER">
+		<![CDATA[
+		SELECT ident_current('book');
+		]]>
+		</selectKey>
+
+    </insert>
+    <!--// Insert Identity End //-->
+
+
+
+<!--// Update If Statement Start //-->
+    <update id="UpdateBookByMapper" parameterType="java.util.HashMap">
+		UPDATE book SET
+		<trim prefix="SET" suffixOverrides=",">
+		<if test="author != null" >
+		,author = #{author}
+		</if>
+		<if test="genre != null" >
+		,genre = #{genre}
+		</if>
+		<if test="publisher != null" >
+		,publisher = #{publisher}
+		</if>
+		<if test="quantity != null" >
+		,quantity = #{quantity}
+		</if>
+		<if test="title != null" >
+		,title = #{title}
+		</if>
+		</trim>
+		WHERE id = #{id}
+    </update>
+    <!--// Update If Statement End //-->
+    
+	<delete id="deleteBookByMapper" parameterType="hashmap">
+		<![CDATA[
+		DELETE FROM book
+		 WHERE id = #{id}
+		]]>
+	</delete>
+
+
+
+
+
 </mapper>
