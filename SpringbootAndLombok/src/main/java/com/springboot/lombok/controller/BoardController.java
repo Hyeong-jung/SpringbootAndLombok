@@ -1,7 +1,13 @@
 package com.springboot.lombok.controller;
 
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.lombok.model.Board;
 import com.springboot.lombok.service.BoardService;
+import com.springboot.lombok.util.BoardExcelExporter;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -72,5 +79,25 @@ public class BoardController {
 		
 		return boardService.deleteBoard(no);
 	}
+	
+    @GetMapping(value = "/board/excel")
+    public void exportToExcelContacts(HttpServletResponse response) throws IOException {
+        log.info(" Contact DB 호출");
+
+        response.setContentType("application/octet-stream");
+        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        String currentDateTime = dateFormatter.format(new Date());
+         
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=BoardList_" + currentDateTime + ".xlsx";
+        response.setHeader(headerKey, headerValue);
+        
+                
+        final List<Board> boardListAll = boardService.getAllBoard();
+        
+        BoardExcelExporter excelExporter = new BoardExcelExporter(boardListAll);
+        
+        excelExporter.export(response);
+    }
 	
 }
