@@ -28,7 +28,7 @@ public class BoardExcelExporter {
     }
     
     private void writeHeaderLine() {
-        sheet = workbook.createSheet("Contacts");
+        sheet = workbook.createSheet("Board");
          
         Row row = sheet.createRow(0);
          
