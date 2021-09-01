@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="thymeleaf/fragments/configHeader :: header"/>
+
+<style>
+    .headContainer {
+        width: 100%;
+        margin: 0px 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .subMenuContainer {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .menuLink {
+        color: white;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+    .gnbContainer {
+        display: flex;
+    }
+
+    .gnbProfileImageContainer {
+        color: white;
+        width: 26px;
+    }
+
+    .gnbProfileImageContainer:hover {
+        cursor: pointer;
+    }
+
+    .gnbNameContainer {
+        width: 40px;
+    }
+
+    .gnb a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: currentColor;
+    }
+
+    .gnbName {
+        color: white;
+    }
+
+    .gnbArrow {
+        color: white;
+    }
+
+    .gnb {
+        display: none;
+        position: absolute;
+        border-radius: 5px;
+        margin-top: 15px;
+        width: 100px;
+        z-index: 1;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.3);
+    }
+
+    .gnb > a {
+        color: black;
+        margin: 3px;
+        font-size: 14px;
+    }
+
+    .gnbActive {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <nav style="left: 0; right: 0; top: 0;"
+         th:fragment="head" class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="headContainer">
+            <a class="navbar-brand" th:href="@{/catalog}">My Commerce</a>
+
+            <div class="subMenuContainer">
+                <div th:if="${session.login} eq true">
+                    <div class="gnbContainer">
+                        <div class="gnbProfileImageContainer">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+
+                        <div class="gnbNameContainer">
+                            <span class="gnbName">galid</span>
+                            <div class="gnb">
+                                <a th:href="@{/logout}">
+                                    로그아웃
+                                </a>
+                                <a th:href="@{/carts}">
+                                    장바구니
+                                </a>
+                                <a th:href="@{/my/orders}">
+                                    주문목록
+                                </a>
+                                <a th:href="@{/my/reviews}">
+                                    후기목록
+                                </a>
+                                <a th:href="@{/items/new}">
+                                    상품등록
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="gnbArrowContainer">
+                            <i class="gnbArrow fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div th:if="${session.login} eq null">
+                    <a class="menuLink" href="/auth/signIn">
+                        로그인
+                    </a>
+                    <a class="menuLink" href="/auth/signUp">
+                        회원가입
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+<script>
+    $(function() {
+      $(".gnbNameContainer, .gnb").mouseover(function() {
+        $(".gnb").addClass("gnbActive");
+      });
+
+      $(".gnb").mouseout(function() {
+        $(".gnb").removeClass("gnbActive");
+      })
+
+    });
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="thymeleaf/fragments/configHeader"></div>
+<body>
+<div th:replace="thymeleaf/fragments/head"></div>
+
+<div class="jumbotron">
+    <div class="container">
+        <form method="post" th:object="${form}" th:action="@{/items/new}">
+            <div class="form-group">
+                <label th:for="name">상품명</label>
+                <input type="text" th:field="*{name}" class="form-control" placeholder="상품 이름">
+            </div>
+
+            <div class="form-group">
+                <label th:for="imagePath">상품사진</label>
+                <input type="text" th:field="*{imagePath}" class="form-control" placeholder="상품 사진">
+            </div>
+
+            <div class="form-group">
+                <label th:for="price">상품가격</label>
+                <input type="text" th:field="*{price}" class="form-control" placeholder="상품 가격">
+            </div>
+
+            <div class="form-group">
+                <label th:for="stockQuantity">재고</label>
+                <input type="text" th:field="*{stockQuantity}" class="form-control" placeholder="재고">
+            </div>
+
+            <div class="form-group">
+                <label th:for="categoryId">카테고리</label>
+                <input type="text" th:field="*{categoryId}" class="form-control" placeholder="카테고리">
+            </div>
+
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

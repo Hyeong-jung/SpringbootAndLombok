@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="thymeleaf/fragments/configHeader"></div>
+<body>
+<div th:replace="thymeleaf/fragments/head"></div>
+
+<div class="container">
+    <div class="itemContainer">
+        <div class="imageContainer">
+            <img class="itemImage" th:src="@{${item.imagePath}}" alt="">
+        </div>
+        <div class="informationContainer">
+            <div class="itemNameContainer">
+                <h2 class="itemName" th:text="${item.name}"></h2>
+            </div>
+            <div class="itemPriceContainer">
+                <h2 class="itemPrice" th:text="${#numbers.formatInteger(item.price, 3, 'COMMA')} + ' 원'"></h2>
+            </div>
+
+            <div th:if="${item.stockQuantity &lt; 1}" class="soldOutContainer">
+                <i class="fas fa-ban" style="color: #CCC;"></i> 품절
+            </div>
+            <div th:unless="${item.stockQuantity &lt; 1}" class="orderContainer">
+                <form th:onsubmit="return validateOrderCount()">
+                    <div class="form-group">
+                        <input id="itemIdInput" type="text" th:name="itemId" th:value="${item.itemId}"
+                               style="display: none;">
+                        <input id="orderCountInput" type="number" th:value="1" th:min="1" th:max="${item.stockQuantity}"
+                               th:name="orderCount">
+                        <button th:formmethod="post" th:formaction="@{/carts}" id="addToCartBtn" class="btn btn-light">
+                            장바구니
+                        </button>
+                    </div>
+                </form>
+                <div class="form-group">
+                    <button id="orderBtn" class="btn btn-primary">
+                        바로구매
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<style>
+    .container {
+
+    }
+
+    .itemContainer {
+        height: 50vh;
+        margin-top: 5vh;
+        border: solid 1px #CECECE;
+        display: flex;
+        align-items: center;
+    }
+
+    .imageContainer {
+        flex: 1;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .itemImage {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .informationContainer {
+        flex: 1;
+        max-width: 50%;
+        height: 90%;
+    }
+
+    .itemNameContainer {
+        max-width: 90%;
+        border-bottom: 1px solid #CCC;
+    }
+
+    .itemName {
+        overflow: auto;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .itemPriceContainer {
+        padding: 12px 0px;
+    }
+
+    .itemPrice {
+        font-size: 18px;
+        font-weight: bold;
+        color: #AE0000;
+    }
+
+    .soldOutContainer {
+        color: #CCC;
+    }
+
+    .orderContainer {
+        display: flex;
+    }
+
+    .orderCountError {
+        font-size: 10px;
+        color: orangered;
+    }
+
+</style>
+
+<script>
+  function validateOrderCount() {
+    let orderCount = parseInt(document.getElementById("orderCountInput").value);
+
+    if(orderCount <= 0) {
+        alert("주문 수량은 1개 이상이어야 합니다.");
+        return false;
+    }
+    return true;
+  }
+
+ $(function () {
+    // 바로 구매 ====================
+    function getCartInputList() {
+      let cartInputList = "";
+      let itemId = $("#itemIdInput").val();
+      let orderCount = $("#orderCountInput").val();
+      cartInputList += "<input type='text' name='orderLineList[0].itemId' value='" + itemId + "'>";
+      cartInputList += "<input type='text' name='orderLineList[0].orderCount' value='"+ orderCount + "'>";
+      return cartInputList;
+    }
+
+    $("#orderBtn").on("click", function() {
+        let form = $("<form action='/orders/direct' method='post'>" +
+                        getCartInputList() +
+                    "</form> ");
+        $("body").append(form);
+        form.submit();
+    });
+
+  });
+</script>
