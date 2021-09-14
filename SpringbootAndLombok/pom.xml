@@ -173,7 +173,7 @@
             <version>4.1.0</version>
         </dependency>
 
-
+        <!-- CSV Library org.apache.commons -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
@@ -187,7 +187,11 @@
    <version>1.16</version>
   </dependency>
 		
-					        
+<dependency>
+    <groupId>javax.json</groupId>
+    <artifactId>javax.json-api</artifactId>
+    <version>1.0</version>
+</dependency>
     </dependencies>
  
     <build>
