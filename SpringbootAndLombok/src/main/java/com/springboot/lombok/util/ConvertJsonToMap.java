@@ -16,7 +16,8 @@ import javax.json.JsonObject;
 public class ConvertJsonToMap {
 
 	
-    public static Map<String, Object> jsonToMap(JsonObject json) {
+    //public static Map<String, Object> jsonToMap(JsonObject json) {
+	public Map<String, Object> jsonToMap(JsonObject json) {
         Map<String, Object> retMap = new HashMap<String, Object>();
 
         if(json != JsonObject.NULL) {
@@ -25,7 +26,8 @@ public class ConvertJsonToMap {
         return retMap;
     }
     
-    public static Map<String, Object> toMap(JsonObject object) throws JsonException {
+    //public static Map<String, Object> toMap(JsonObject object) throws JsonException {
+	public Map<String, Object> toMap(JsonObject object) throws JsonException {
         Map<String, Object> map = new HashMap<String, Object>();
 
         Iterator<String> keysItr = object.keySet().iterator();
@@ -45,7 +47,8 @@ public class ConvertJsonToMap {
         return map;
     }
     
-    public static List<Object> toList(JsonArray array) {
+    //public static List<Object> toList(JsonArray array) {
+	public List<Object> toList(JsonArray array) {
         List<Object> list = new ArrayList<Object>();
         for(int i = 0; i < array.size(); i++) {
             Object value = array.get(i);
