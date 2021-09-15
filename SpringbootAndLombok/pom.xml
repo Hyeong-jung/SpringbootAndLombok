@@ -145,6 +145,12 @@
             <artifactId>log4j-core</artifactId>
         </dependency>
         
+        <dependency>
+            <groupId>org.bgee.log4jdbc-log4j2</groupId>
+            <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+            <version>1.16</version>
+        </dependency>
+        
         <!-- Querydsl -->
         <dependency>
             <groupId>com.querydsl</groupId>
@@ -180,24 +186,25 @@
             <version>1.8</version>
         </dependency>
 
+        <!-- JSON javax.json & org.glassfish -->
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>1.1</version>
+        </dependency>
 
-  <dependency>
-   <groupId>org.bgee.log4jdbc-log4j2</groupId>
-   <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
-   <version>1.16</version>
-  </dependency>
-		
-<dependency>
-    <groupId>javax.json</groupId>
-    <artifactId>javax.json-api</artifactId>
-    <version>1.0</version>
-</dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.1</version>
+        </dependency>
 
-<dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20201115</version>
-</dependency>
+        <!-- JSON org.json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20201115</version>
+        </dependency>
     </dependencies>
  
     <build>
