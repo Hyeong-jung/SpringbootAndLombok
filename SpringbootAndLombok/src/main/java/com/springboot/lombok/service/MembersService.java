@@ -3,7 +3,7 @@ package com.springboot.lombok.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +23,7 @@ public class MembersService {
 	
     private final MembersRepository memberRepository;
     private final CartService cartService;
-    private final PasswordEncoder encoder;
+    //private final PasswordEncoder encoder;
 	
     public Long signUp(SignUpRequest request) {
         validateDuplicateMember(request.getAuthId());
@@ -32,7 +32,8 @@ public class MembersService {
         MemberEntity newMember = MemberEntity.builder()
                 .address(new DeliveryAddress(request.getCity(), request.getStreet()))
                 .authId(request.getAuthId())
-                .authPw(encoder.encode(request.getPassword()))
+                //.authPw(encoder.encode(request.getPassword()))
+                .authPw(request.getPassword())
                 .name(request.getName())
                 .phone(request.getPhone())
                 .build();
